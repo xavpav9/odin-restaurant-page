@@ -1,0 +1,16 @@
+{
+  "name": "odin-restaurant-page",
+  "version": "1.0.0",
+  "description": "The Odin Project Restaurant Page Project.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Xavier Tondelier",
+  "license": "ISC",
+  "dependencies": {
+    "webpack": "^5.102.1",
+    "webpack-cli": "^6.0.1"
+  }
+}
