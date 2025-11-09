@@ -6,27 +6,32 @@ import createContactTab from "./contact.js";
 
 const screenController = (function() {
   const contentDiv = document.querySelector("div#content");
+  const btns = [...document.querySelectorAll("nav button")];
 
-  function clearScreen() {
+  function clearScreen(btn) {
     contentDiv.textContent = ""; 
+    for (let btn of btns) {
+      btn.classList.remove("selected");
+    }
+    btn.classList.add("selected");
   }
 
   document.querySelector("button.home").addEventListener("click", evt => {
-    clearScreen();
+    clearScreen(evt.target);
     createHomeTab();
   });
   document.querySelector("button.menu").addEventListener("click", evt => {
-    clearScreen();
+    clearScreen(evt.target);
     createMenuTab();
   });
   document.querySelector("button.about").addEventListener("click", evt => {
-    clearScreen();
+    clearScreen(evt.target);
     createAboutTab();
   });
   document.querySelector("button.contact").addEventListener("click", evt => {
-    clearScreen();
+    clearScreen(evt.target);
     createContactTab();
   });
 })();
 
-createHomeTab();
+document.querySelector("button.home").dispatchEvent(new Event("click"));
