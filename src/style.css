@@ -12,7 +12,6 @@ body {
 
   background-color: lightgreen;
   min-height: 100vh;
-  padding-bottom: 80px;
 }
 
 header {
@@ -50,9 +49,7 @@ header {
       border: none;
       background-color: green;
 
-      &:hover {
-        background-color: #090;
-      }
+      &:hover { background-color: #090; }
 
       &.selected {
         cursor: default;
@@ -169,5 +166,35 @@ div#content {
     image-rendering: pixelated;
     width: 80%;
     height: auto;
+  }
+}
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  margin-top: auto;
+  color: white;
+  background-color: #227;
+  padding: 20px 40px;
+
+  a {
+    display: flex;
+    align-items: center;
+
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+
+    &:hover { color: lightgreen; }
+
+    &:active { color: #80dd80; }
+  }
+
+  svg {
+    transition: stroke 0.3s;
+    &:hover { stroke: lightgreen; }
+    &:active { stroke: #80dd80; }
   }
 }
