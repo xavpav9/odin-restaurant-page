@@ -3,3 +3,29 @@
   margin: 0px;
   line-height: 1.5;
 }
+
+header {
+  display: flex;
+  position: sticky;
+  justify-content: space-between;
+  top: 0px;
+
+  background-color: green;
+  padding: 10px 9vw 0px 2vw;
+
+  h1 {
+    align-self: center;
+    color: white;
+    margin-bottom: 10px;
+  }
+
+  nav {
+    display: flex;
+
+    button {
+      padding: 0px 20px;
+      border-radius: 0px;
+      border: none;
+    }
+  }
+}
