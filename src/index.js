@@ -14,6 +14,7 @@ const screenController = (function() {
       btn.classList.remove("selected");
     }
     btn.classList.add("selected");
+    scrollTo(0, 0);
   }
 
   document.querySelector("button.home").addEventListener("click", evt => {

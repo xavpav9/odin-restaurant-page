@@ -11,4 +11,5 @@ Another project from The Odin Project which goes into using webpack (a bundler),
 - Employee picture 5 by [Haberdoedas II](https://unsplash.com/@haberdoedas2?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/photos/a-close-up-of-an-alligators-mouth-with-its-mouth-open-2JdGZkT0o-0?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
 - Employee picture 6 by [Federico Di Dio photography](https://unsplash.com/@didiofederico_photographer?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/photos/brown-deer-standing-on-brown-grass-field-during-daytime-8113Nz_Wia4?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
 - Icons from [Feather](https://www.feathericons.com).
+- [Samoa Gardens](https://www.dafont.com/ncl-samoa-gardens.font) typeface from (dafont.com)[https://www.dafont.com].
       

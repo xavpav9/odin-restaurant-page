@@ -4,6 +4,22 @@
   line-height: 1.5;
 }
 
+@font-face {
+  src: url("./fonts/NCLSamoaGardens.woff2") format("woff2"), url("./fonts/NCLSamoaGardens.woff") format("woff");
+  font-family: "Samoa Gardens";
+  font-style: none;
+  font-weight: none;
+  font-display: swap;
+}
+
+:root {
+  font-family: "Georgia", system-ui, serif;
+}
+
+html * {
+  font-family: inherit;
+}
+
 body {
   box-sizing: border-box;
   display: flex;
@@ -23,6 +39,7 @@ header {
 
   background-color: green;
   padding: 10px 9vw 0px 2vw;
+  font-family: "Samoa Gardens", system-ui, sans-serif;
 
   img.logo {
     image-rendering: pixelated;
@@ -176,6 +193,7 @@ footer {
 
   margin-top: auto;
   color: white;
+  font-family: "Times New Roman", system-ui, serif;
   background-color: #227;
   padding: 20px 40px;
 
