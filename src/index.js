@@ -35,4 +35,4 @@ const screenController = (function() {
   });
 })();
 
-document.querySelector("button.home").dispatchEvent(new Event("click"));
+document.querySelector("button.menu").dispatchEvent(new Event("click"));
