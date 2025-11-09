@@ -2,7 +2,7 @@ import "./style.css";
 import createHomeTab from "./home.js";
 import createMenuTab from "./menu.js";
 import createAboutTab from "./about.js";
-import createContactTab from "./contact.js";
+import createContactsTab from "./contacts.js";
 
 const screenController = (function() {
   const contentDiv = document.querySelector("div#content");
@@ -30,7 +30,7 @@ const screenController = (function() {
   });
   document.querySelector("button.contact").addEventListener("click", evt => {
     clearScreen(evt.target);
-    createContactTab();
+    createContactsTab();
   });
 })();
 
