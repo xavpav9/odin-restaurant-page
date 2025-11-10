@@ -265,7 +265,7 @@ div#content {
   }
 
   .tel, .location {
-    max-width: 80%;
+    max-width: 75%;
     font-weight: 700;
     white-space: pre-wrap;
     &::before {
@@ -387,6 +387,12 @@ footer {
 @media (max-width: 600px) {
   div#content {
     width: 95vw;
+
+    .opening-hours {
+      table {
+        width: 80%;
+      }
+    }
 
     .links {
       gap: 20px;
