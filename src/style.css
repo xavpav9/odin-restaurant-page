@@ -45,9 +45,14 @@ header {
   padding: 10px 7vw 0px 2vw;
   font-family: "Samoa Gardens", system-ui, sans-serif;
 
+  .title {
+    display: flex;
+    gap: 20px;
+  }
+
   img.logo {
     height: 3rem;
-    width: auto;
+    width: 3rem;
   }
 
   h1 {
@@ -57,9 +62,11 @@ header {
   }
 
   nav {
+    align-self: end;
     display: flex;
     gap: 5px;
     margin-left: auto;
+    height: 3rem;
 
     button {
       cursor: pointer;
@@ -81,13 +88,14 @@ header {
 }
 
 div#content {
+  box-sizing: border-box;
   align-self: center;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 20px;
 
-  width: clamp(750px, 60vw, 850px);
+  width: clamp(790px, 65vw, 890px);
   border: 2px solid black;
   border-radius: 5px;
   background-color: white;
@@ -103,6 +111,7 @@ div#content {
   .intro-para {
     border-left: 4px solid gold;
     padding: 4px 0px 4px 8px;
+    margin-bottom: 20px;
     max-width: 800px;
 
     & > p + p {
@@ -153,7 +162,7 @@ div#content {
     display: flex;
     list-style-type: none;
     justify-content: center;
-    margin: 30px 0px 30px 0px;
+    margin-bottom: 30px;
     gap: 50px;
     font-family: "Samoa Gardens", system-ui, sans-serif;
     font-size: 1.2rem;
@@ -186,6 +195,7 @@ div#content {
   }
 
   .food-div {
+    width: 100%;
     scroll-margin-top: 90px;
   }
 
@@ -228,15 +238,15 @@ div#content {
   }
 
   .contact-grid {
-    grid-auto-rows: 300px;
+    row-gap: 50px;
 
     & > div {
-      grid-template: 1fr 2fr 1fr / 1fr 1fr;
+      grid-template: 1fr 3fr 1fr / 1fr 1fr;
 
       border: 10px solid green;
       background-color: #ded;
       padding: 5px 10px 20px 10px;
-      height: 70%;
+      height: auto;
 
       img {
         width: 70%;
@@ -255,6 +265,7 @@ div#content {
   }
 
   .tel, .location {
+    max-width: 80%;
     font-weight: 700;
     white-space: pre-wrap;
     &::before {
@@ -306,5 +317,98 @@ footer {
     transition: stroke 0.3s;
     &:hover { stroke: lightgreen; }
     &:active { stroke: #80dd80; }
+  }
+}
+
+@media (max-width: 1000px) {
+  header {
+    position: static;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    padding: 10px 2vw 0px 2vw;
+
+    nav {
+      align-self: center;
+      margin: 0px;
+    }
+  }
+
+  div#content {
+    .food-div {
+      scroll-margin-top: 30px;
+    }
+  }
+}
+
+@media (max-width: 900px) {
+  div#content {
+    width: 80vw;
+
+    .contact-grid, .food-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .food-grid {
+      & > div {
+        grid-template: 6fr max(100px, 1fr) 2fr / 9fr 1fr;
+        width: max(300px, 60vw);
+
+        &:nth-child(odd):last-child {
+          grid-column: 1 / 2;
+          width: max(300px, 60vw);
+        }
+      }
+    }
+
+    .contact-grid {
+      & > div {
+        grid-template: 1fr 3fr 3fr / 1fr 1fr;
+        padding: 5px 10px 15px;
+        place-items: center;
+
+        img {
+          width: max(150px, 75%);
+          grid-area: 2 / 2 / 4 / 3;
+          height: auto;
+          border-radius: 10px;
+        }
+
+        .email {
+          word-break: break-word;
+          grid-column: 1 / 2;
+          align-self: start;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  div#content {
+    width: 95vw;
+
+    .links {
+      gap: 20px;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .contact-grid {
+      grid-auto-rows: auto;
+      row-gap: 50px;
+
+      & > div {
+        height: auto;
+        grid-template: 1fr 1fr 1fr 5fr / 1fr;
+        row-gap: 20px;
+        padding: 10px 10px 20px;
+
+        img {
+          width: max(150px, 70%);
+          grid-area: 4 / 1 / 5 / 2;
+        }
+      }
+    }
   }
 }
