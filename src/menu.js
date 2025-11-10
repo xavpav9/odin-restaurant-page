@@ -1,4 +1,20 @@
 import caeserSaladImage from "./images/menu-pictures/caeser-salad.jpg";
+import capreseSaladImage from "./images/menu-pictures/caprese-salad.jpg";
+import cobbSaladImage from "./images/menu-pictures/cobb-salad.jpg";
+import greekSaladImage from "./images/menu-pictures/greek-salad.jpg";
+import pepperSticksImage from "./images/menu-pictures/sliced-pepper.jpg";
+
+import carrotSticksImage from "./images/menu-pictures/carrot-sticks.jpg";
+import mushyPeasImage from "./images/menu-pictures/mushy-peas.jpg";
+import saladSauceImage from "./images/menu-pictures/salad-sauce.jpg";
+
+import beefHeavenImage from "./images/menu-pictures/beef-heaven.jpg";
+import veganKingdomImage from "./images/menu-pictures/vegan-kingdom.jpg";
+import challengersSaladImage from "./images/menu-pictures/challengers-salad.jpg";
+
+import fruitSaladImage from "./images/menu-pictures/fruit-salad.jpg";
+import bananaSplitImage from "./images/menu-pictures/banana-split.jpg";
+
 
 function createCards(cards, header) {
   const foodDiv = document.createElement("div");
@@ -21,7 +37,7 @@ function createCards(cards, header) {
     price.textContent = card.price;
     price.classList.add("price");
     image.alt = `image of ${card.name}`;
-    image.src = caeserSaladImage;
+    image.src = card.image;
 
     [image, name, description, price].forEach(element => {
       div.appendChild(element);
@@ -51,17 +67,14 @@ export default function() {
 
   const links = document.createElement("ul");
   links.classList.add("links");
-  const linkToTraditional = document.createElement("a");
-  linkToTraditional.href = "#Traditional";
-  linkToTraditional.textContent = "Traditional";
-  const linkToSides = document.createElement("a");
-  linkToSides.href = "#Sides";
-  linkToSides.textContent = "Sides";
-  const linkToSpecial = document.createElement("a");
-  linkToSpecial.href = "#Specials";
-  linkToSpecial.textContent = "Specials";
-  [linkToTraditional, linkToSides, linkToSpecial].forEach(link => {
+
+  ["Traditional", "Sides", "Specials", "Puddings"].forEach(linkName => {
+    const link = document.createElement("a");
+    link.href = `#${linkName}`;
+    link.textContent = linkName;
+
     link.addEventListener("click", evt => {
+      console.log(evt.name);
       evt.preventDefault();
       document.querySelector(link.getAttribute("href")).scrollIntoView({ behavior: "smooth" });
     });
@@ -73,23 +86,28 @@ export default function() {
 
   const traditionalFood = createCards(
     [{name: "Caeser Salad", description: "A beautiful salad full of lettuce and the signature croutons.", price: "£5", image: caeserSaladImage},
-  {name: "Caprese Salad", description: "An Italian salad made of fresh mozzarella, tomatoes and basil, with a bit of salt an olive oil on top.", price: "£6", image: caeserSaladImage},
-  {name: "Cobb Salad", description: "An American garden salad containing salad greens, eggs, chicken breast and more, arranged in neat rows.", price: "£4", image: caeserSaladImage},
-  {name: "Greek Salad", description: "A traditional part of the Greek cuisine, made with cucumber, feta cheese and more.", price: "£4", image: caeserSaladImage},
-  {name: "Fruit Salad", description: "A mixture of cut up different fruits, including apples, grapes etc.", price: "£3", image: caeserSaladImage},
+  {name: "Caprese Salad", description: "An Italian salad made of fresh mozzarella, tomatoes and basil, with a bit of salt an olive oil on top.", price: "£6", image: capreseSaladImage},
+  {name: "Cobb Salad", description: "An American garden salad containing salad greens, eggs, chicken breast and more.", price: "£4", image: cobbSaladImage},
+  {name: "Greek Salad", description: "A traditional part of the Greek cuisine, made with cucumber, feta cheese and more.", price: "£4", image: greekSaladImage},
   ], "Traditional");
 
+  const sides = createCards(
+    [{name: "Sliced Pepper", description: "Some hearty rings of pepper to have on the side of your meal.", price: "50p", image: pepperSticksImage},
+    {name: "Carrot Sticks", description: "Crunchy carrot sticks to compliment the meal.", price: "50p", image: carrotSticksImage},
+    {name: "Mushy Peas", description: "A fish and chips special, but for salad instead.", price: "£1", image: mushyPeasImage},
+    {name: "Salad Sauce", description: "A blend of different vegetables to make a perfect tray of sauces.", price: "75p", image: saladSauceImage},
+    ], "Sides");
+
   const specialFood = createCards(
-    [{name: "Beef Heaven", description: "A salad of green leaves, filled to the brim with steak pieces.", price: "£10", image: caeserSaladImage},
-    {name: "Vegan Kingdom", description: "Every single piece of vegetable and fruit imaginable.", price: "£8", image: caeserSaladImage},
-    {name: "Challenger's Salad", description: "It's simple really - 10 bowls (20kg) of salad, and if you eat it within 1hr30mins, then it's free.", price: "£30", image: caeserSaladImage},
+    [{name: "Beef Heaven", description: "The salad is barely noticable under with this steak insight.", price: "£10", image: beefHeavenImage},
+    {name: "Vegan Kingdom", description: "Every single piece of vegetable and fruit imaginable.", price: "£8", image: veganKingdomImage},
+    {name: "Challenger's Salad", description: "It's simple really - 10 bowls (20kg) of salad, and if you eat it within 1hr30mins, then it's free!", price: "£30", image: challengersSaladImage},
     ], "Specials");
 
-  const sides = createCards(
-    [{name: "Pepper Sticks", description: "Some hearty sticks of pepper to have on the side of your meal.", price: "50p", image: caeserSaladImage},
-    {name: "Carrot Sticks", description: "Crunchy carrot sticks to compliment the meal.", price: "50p", image: caeserSaladImage},
-    {name: "Mushy Peas", description: "A fish and chips special, but for salad instead.", price: "£1", image: caeserSaladImage},
-    ], "Sides");
+  const puddings = createCards(
+    [{name: "Fruit Salad", description: "A mixture of cut up different fruits, including apples, grapes etc.", price: "£3", image: fruitSaladImage},
+    {name: "Banana Split", description: "A classic American pudding, made with banana, three scoops of ice cream, and sauces on top.", price: "£3", image: bananaSplitImage},
+    ], "Puddings");
 
   const backToTopBtn = document.createElement("button");
   backToTopBtn.textContent = "^ Back to top ^";
@@ -104,5 +122,6 @@ export default function() {
   contentDiv.appendChild(traditionalFood);
   contentDiv.appendChild(sides);
   contentDiv.appendChild(specialFood);
+  contentDiv.appendChild(puddings);
   contentDiv.appendChild(backToTopBtn);
 }
