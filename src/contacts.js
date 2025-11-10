@@ -46,12 +46,7 @@ export default function() {
   });
   contactGrid.classList.add("contact-grid");
 
-  const tel = document.createElement("p");
-  tel.textContent = "+44 01234 567890";
-  tel.classList.add("tel");
-
   contentDiv.appendChild(header);
   contentDiv.appendChild(introductoryPara);
   contentDiv.appendChild(contactGrid);
-  contentDiv.appendChild(tel);
 }

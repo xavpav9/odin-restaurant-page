@@ -30,6 +30,10 @@ body {
   min-height: 100vh;
 }
 
+.logo {
+  image-rendering: pixelated;
+}
+
 header {
   display: flex;
   position: sticky;
@@ -42,7 +46,6 @@ header {
   font-family: "Samoa Gardens", system-ui, sans-serif;
 
   img.logo {
-    image-rendering: pixelated;
     height: 3rem;
     width: auto;
   }
@@ -251,16 +254,25 @@ div#content {
     }
   }
 
-  .tel {
+  .tel, .location {
     font-weight: 700;
+    white-space: pre-wrap;
     &::before {
-      content: "Telephone: ";
       font-weight: 500;
     }
   }
 
+  .tel {
+    margin-top: 30px;
+    &::before { content: "Telephone:  "; }
+  }
+
+  .location {
+    margin: -10px 0px;
+    &::before { content: "Location:  "; }
+  }
+
   .logo {
-    image-rendering: pixelated;
     width: 80%;
     height: auto;
   }

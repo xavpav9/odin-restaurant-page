@@ -21,12 +21,7 @@ export default function() {
   logoImage.src = logo;
   logoImage.classList.add("logo");
 
-  const tel = document.createElement("p");
-  tel.textContent = "+44 01234 567890";
-  tel.classList.add("tel");
-
   contentDiv.appendChild(header);
   contentDiv.appendChild(introductoryDiv);
   contentDiv.appendChild(logoImage);
-  contentDiv.appendChild(tel);
 }
