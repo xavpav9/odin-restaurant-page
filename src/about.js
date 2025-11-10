@@ -1,4 +1,4 @@
-import logo from "./images/logo.png";
+import logo from "./images/logos/logo-large.png";
 
 export default function() {
   const contentDiv = document.querySelector("div#content");
