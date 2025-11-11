@@ -85,9 +85,9 @@ export default function() {
   });
 
   const traditionalFood = createCards(
-    [{name: "Caeser Salad", description: "A beautiful salad full of lettuce and the signature croutons.", price: "£5", image: caeserSaladImage},
+    [{name: "Caeser Salad", description: "A beautiful salad full of lettuce and the signature croutons and Parmesan cheese.", price: "£5", image: caeserSaladImage},
   {name: "Caprese Salad", description: "An Italian salad made of fresh mozzarella, tomatoes and basil, with a bit of salt an olive oil on top.", price: "£6", image: capreseSaladImage},
-  {name: "Cobb Salad", description: "An American garden salad containing salad greens, eggs, chicken breast and more.", price: "£4", image: cobbSaladImage},
+  {name: "Cobb Salad", description: "An American garden salad containing salad greens, eggs, chicken breast and more.", price: "£5", image: cobbSaladImage},
   {name: "Greek Salad", description: "A traditional part of the Greek cuisine, made with cucumber, feta cheese and more.", price: "£4", image: greekSaladImage},
   ], "Traditional");
 
@@ -99,14 +99,14 @@ export default function() {
     ], "Sides");
 
   const specialFood = createCards(
-    [{name: "Beef Heaven", description: "The salad is barely noticable under with this steak insight.", price: "£10", image: beefHeavenImage},
+    [{name: "Beef Heaven", description: "The salad is barely noticable with this steak right in your line of sight.", price: "£10", image: beefHeavenImage},
     {name: "Vegan Kingdom", description: "Every single piece of vegetable and fruit imaginable.", price: "£8", image: veganKingdomImage},
     {name: "Challenger's Salad", description: "It's simple really - 10 bowls (20kg) of salad, and if you eat it within 1hr30mins, then it's free!", price: "£30", image: challengersSaladImage},
     ], "Specials");
 
   const puddings = createCards(
     [{name: "Fruit Salad", description: "A mixture of cut up different fruits, including apples, grapes etc.", price: "£3", image: fruitSaladImage},
-    {name: "Banana Split", description: "A classic American pudding, made with banana, three scoops of ice cream, and sauces on top.", price: "£3", image: bananaSplitImage},
+    {name: "Banana Split", description: "A classic American pudding, made with banana, three scoops of ice cream, and sauces on top.", price: "£4", image: bananaSplitImage},
     ], "Puddings");
 
   const backToTopBtn = document.createElement("button");

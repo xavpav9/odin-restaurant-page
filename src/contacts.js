@@ -13,7 +13,7 @@ export default function() {
   header.classList.add("header");
 
   const introductoryPara = document.createElement("p");
-  introductoryPara.textContent = "At the Salad Bar, we have 5 very hard working staff, who spend all of their effor making sure that this is the best place for a customer to come to. The waiters show proper etiquette, and the food is always delicious. Below is the contact details of all of our staff members:";
+  introductoryPara.textContent = "At the Salad Bar, we have five very hard working staff and a watchful manager, who spend put all of their effort into making sure that this is the best place for a customer to come to. The waiters show proper etiquette, and the food is always delicious. Below is the contact details of all of our staff members:";
   introductoryPara.classList.add("intro-para");
 
   const contactGrid = document.createElement("div");
