@@ -22,7 +22,7 @@
   "scripts": {
     "build": "webpack --config webpack.prod.js",
     "dev": "webpack serve --config webpack.dev.js",
-    "deploy": "git checkout gh-pages && git merge --no-edit main && git add -f dist && git commit 'Deployment commit' && git subtree push --prefix dist origin gh-pages && git checkout main",
+    "deploy": "git checkout gh-pages && git merge --no-edit main && git add -f dist && git commit -m'Deployment commit' && git subtree push --prefix dist origin gh-pages && git checkout main",
 
     "prebuild": "echo 'Building project in production mode'",
     "predev": "echo 'Initialising dev server'"
